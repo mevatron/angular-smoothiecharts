@@ -10,7 +10,8 @@ angular.module('smoothie-directive', [])
                 background: '@',
                 lineColor:  '@',
                 lineWidth:  '@',
-                labelColor: '@'
+                labelColor: '@',
+                labelPrecision: '@'
             },
 
             controller: function($scope, $element) {
@@ -22,7 +23,8 @@ angular.module('smoothie-directive', [])
                         fillStyle: $scope.background || 'transparent'
                     },
                     labels: { 
-                        fillStyle: $scope.labelColor || 'transparent' 
+                        fillStyle: $scope.labelColor || 'transparent',
+                        precision: $scope.labelPrecision || 2
                     }
                 });
             }
